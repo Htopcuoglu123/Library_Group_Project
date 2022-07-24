@@ -37,6 +37,9 @@ public class LoginPage {
         String password = ConfigurationReader.getProperty(userType + "_password");
 
 
+
+
+
         login(username,password);
     }
 }
