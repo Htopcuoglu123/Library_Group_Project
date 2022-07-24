@@ -18,9 +18,6 @@ import org.junit.runner.RunWith;
         dryRun =false,
         tags = "@Test",
         publish = true
-
-
-
 )
 public class CukesRunner {
 }
