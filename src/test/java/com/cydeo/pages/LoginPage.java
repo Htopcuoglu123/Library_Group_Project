@@ -13,33 +13,18 @@ public class LoginPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath = " //input[@id='prependedInput'] ")
-    private WebElement userNameField;
+    @FindBy(id = "inputEmail")
+    public WebElement emailInput;
 
-    @FindBy(xpath = " //input[@id='prependedInput2'] ")
-    private WebElement passwordField;
+    @FindBy(id = "inputPassword")
+    public WebElement passwordInput;
 
-    @FindBy(xpath = " //button[@id='_submit'] ")
-    public WebElement loginButton;
+    @FindBy(xpath = "//button")
+    public WebElement signInButton;
 
-
-    public void login(String username,String password) {
-        userNameField.sendKeys(username);
-        passwordField.sendKeys(password);
-        loginButton.click();
-    }
-
-    public void loginDynamic(String userType) {
-
-        userType= userType.replace(" ", "_");
-
-        String username = ConfigurationReader.getProperty(userType + "_username");
-        String password = ConfigurationReader.getProperty(userType + "_password");
-
-
-
-
-
-        login(username,password);
+    public void login(String username, String password) {
+        emailInput.sendKeys(username);
+        passwordInput.sendKeys(password);
+        signInButton.click();
     }
 }

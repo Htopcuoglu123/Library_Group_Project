@@ -14,9 +14,9 @@ import org.junit.runner.RunWith;
                 "json:target/cucumber-report.json"
         },
         features= "src/test/resources/features",
-        glue="com/cydeo/step_definitions",
-        dryRun =true,
-        tags = "@Test",
+        glue="com/cydeo/step_Def",
+        dryRun =false,
+        tags = "@Librarian",
         publish = true
 
 )
